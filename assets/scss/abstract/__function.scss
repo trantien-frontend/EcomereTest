@@ -1,0 +1,3 @@
+@function weight ($value) {
+    @return $value * 100; 
+}

@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+:root {
+    --oragne: #ff7a5f; 
+    --black: #000; 
+    --light-back: #333;
+    --white: #fff; 
+    --gray: #cacaca;
+}
+.max-height {
+  height: 100%;
+}

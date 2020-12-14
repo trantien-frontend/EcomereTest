@@ -1,0 +1,38 @@
+.feature {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    &-items {
+        &__item {
+            position: relative;
+            padding:15px;
+            @include flexbox(flex,center,center);
+            border: 1px solid #eee;
+            margin-bottom: 15px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 1.5%;
+                top: 5%;
+                width: 97%;
+                height: 90%;
+                border: 1px solid #eee;
+            }
+            span {
+                margin-right: 15px;
+                &::before {
+                    margin: 0;
+                    color: var(--oragne);
+                    font-size: 2.8rem;
+                }
+            }
+            h4 {
+                text-transform: uppercase;
+                color: $pagaraph;
+                font-weight: weight(4);
+            }
+            @include reponsive (laptop) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

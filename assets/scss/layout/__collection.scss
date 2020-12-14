@@ -1,0 +1,22 @@
+.collection {
+  &-partern {
+    background: url("../../images/collection-partent.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8rem 0;
+  }
+  &-title {
+      padding-bottom: 4rem;
+      text-align: center;
+      h5 {
+          margin-bottom: 15px;
+      }
+  }
+  &-items {
+      &__item {
+          padding: 15px;
+          background: var(--white);
+          margin-bottom: 15px;
+      }
+  }
+}

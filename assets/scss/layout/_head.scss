@@ -1,0 +1,164 @@
+.head {
+  @include reponsive (laptop) {
+    padding: 3rem 0;
+  }
+  &-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include reponsive(tablet) {
+      justify-content: space-between;
+    }
+  }
+  &-logo {
+    flex-basis: 100%;
+    @include flexbox(flex, center, center);
+    .logo {
+      display: inline-block;
+      width: 150px;
+      padding: 2rem 0;
+      @include reponsive(laptop) {
+        padding: 0;
+      }
+    }
+    @include reponsive(tablet) {
+      flex-basis: 45%;
+      @include flexbox(flex, center, flex-start);
+    }
+    @include reponsive(laptop) {
+      flex-basis: auto;
+    }
+  }
+  &-search-area {
+    position: relative;
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 7px;
+        span {
+          position: relative;
+          &::before {
+            margin-left: 0;
+            color: var(--black);
+          }
+        }
+      }
+      .cart {
+        &-count {
+          position: absolute;
+          top: -110%;
+          right: -65%;
+          padding: 4px 6px;
+          border-radius: 50%;
+          font-family: $ff;
+          font-weight: weight(4);
+          font-size: 12px;
+          color: var(--white);
+          background: var(--oragne);
+        }
+        &-total {
+          padding-left: 10px;
+          color: $pagaraph;
+          font-weight: weight(5);
+          font-size: 1.7rem;
+        }
+      }
+    }
+    @include reponsive(tablet) {
+      flex-basis: 55%;
+    }
+    @include reponsive(laptop) {
+      all: unset;
+    }
+  }
+  &-mobile {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &__bars {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 20px;
+      .bar {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--black);
+        &--top {
+          top: 0;
+        }
+        &--center {
+          top: 50%;
+          transform: translatey(-50%);
+        }
+        &--bottom {
+          bottom: 0;
+        }
+      }
+    }
+    @include reponsive(laptop) {
+      display: none;
+    }
+  }
+  &-nav {
+    width: 100%;
+    margin-top: 2rem;
+    max-height: 0;
+    overflow: hidden;
+    .nav {
+      border: 1px solid #eee;
+      width: 100%;
+      &-item {
+      }
+      &-link {
+        display: block;
+        width: 100%;
+        font-weight: weight(6);
+        font-size: 13px;
+        color: var(--black);
+        text-transform: uppercase;
+        color: $pagaraph-1;
+        padding: 10px 2rem;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        span {
+          margin-left: 5px;
+          color: lightgray;
+        }
+        .nav-plus {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 36px;
+          height: 100%;
+          @include flexbox(flex, center, center);
+          .fa-plus {
+            color: var(--black);
+            font-size: 10px;
+          }
+          @include reponsive(laptop) {
+            display: none;
+          }
+        }
+      }
+      @include reponsive(laptop) {
+        border: none;
+        &-link {
+          border: none;
+        }
+      }
+    }
+    @include reponsive(laptop) {
+      all: unset;
+      .nav {
+        @include flexbox(flex, center, center);
+      }
+    }
+  }
+}

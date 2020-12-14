@@ -1,0 +1,185 @@
+.product-area {
+  padding: 5rem 0;
+  &__title {
+    .tab-list {
+      @include flexbox(flex, center, center);
+      &__link {
+        display: block;
+        margin: 0 15px;
+        text-transform: capitalize;
+        cursor: pointer;
+        &:hover {
+          color: var(--oragne);
+          text-decoration: underline;
+        }
+        &--active {
+          color: var(--oragne);
+          text-decoration: underline;
+        }
+      }
+    }
+    .tab-button {
+      text-align: right;
+      &__prev {
+        @include flexbox(flex-inline, center, center);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 2px solid var(--gray);
+        background: none;
+        outline: none;
+        transition: 0.5s all;
+        cursor: pointer;
+        span {
+          font-size: 1.7rem;
+          color: var(--gray);
+          transition: 0.5s all;
+        }
+        &:hover {
+          background: var(--oragne);
+          border: none;
+          span {
+            color: var(--white);
+          }
+        }
+      }
+      &__next {
+        @extend .tab-button__prev;
+      }
+    }
+  }
+  &__tabs {
+    padding: 3rem 0;
+    .tab-panel {
+      overflow: hidden;
+      display: none;
+      &--active {
+        display: flex;
+      }
+    }
+    .tab-item__img {
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .tab-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s all;
+        .action-cart {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 2;
+          width: 100%;
+          @include flexbox(flex, center, center);
+          .add-cart {
+            width: 60px;
+            height: 60px;
+            background: var(--white);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            margin: 0 3px;
+            transition: 0.5s all;
+            span {
+              &::before {
+                font-size: 2.3rem;
+                margin: 0;
+                font-weight: weight(6);
+                color: var(--oragne);
+                transition: 0.5s all;
+              }
+            }
+            &:hover {
+              background: var(--oragne);
+              span {
+                &::before {
+                  color: var(--white);
+                }
+              }
+            }
+          }
+          .into-page {
+            @extend .add-cart;
+            span {
+              &::before {
+                margin: 0;
+              }
+            }
+          }
+        }
+        .view-cart {
+          position: absolute;
+          right: 15px;
+          bottom: 15px;
+          width: 40px;
+          height: 40px;
+          background: var(--white);
+          border-radius: 50%;
+          line-height: 40px;
+          text-align: center;
+          transition: 0.5s all;
+          span {
+            &::before {
+              font-size: 15px;
+              color: var(--oragne);
+              font-weight: weight(6);
+              margin: 0;
+              transition: 0.5s all;
+            }
+          }
+          &:hover {
+            background: var(--oragne);
+            span {
+              &::before {
+                color: var(--white);
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        .tab-icon {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+    .tab-item__content {
+      padding: 10px 0;
+      h4 {
+        color: $pagaraph-1;
+        font-weight: weight(6);
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+          color: var(--oragne);
+        }
+      }
+      .tab-price {
+        .now-price {
+          font-size: 16px;
+          font-weight: weight(5);
+          color: var(--oragne);
+        }
+        .regular-price {
+          font-size: 16px;
+          font-weight: weight(5);
+          padding-left: 10px;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}

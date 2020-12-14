@@ -1,0 +1,60 @@
+.banner {
+  padding: 2rem 0;
+  &-slides {
+    &__item {
+      height: 50vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      @include flexbox(flex, center, flex-end);
+      &--one {
+        background-image: url("../images/banner-1.webp");
+      }
+      @include reponsive(tablet) {
+          height: 65vh;
+      }
+      @include reponsive(laptop) {
+          height: 70vh;
+      }
+    }
+    &__text {
+      padding: 2rem;
+      max-width: 100%;
+      h5 {
+        font-size: 1.6rem;
+        font-weight: weight(3);
+        color: $pagaraph-1;
+        @include reponsive (tablet) {
+            font-size: 14px;
+        }
+        @include reponsive (laptop) {
+            font-size: 1.7rem;
+        }
+      }
+      h4 {
+        font-size: 2.2rem;
+        font-weight: weight(3);
+        color: $pagaraph-1;
+        padding-top: 7.5px;
+        padding-bottom: 2rem;
+        text-transform: uppercase;
+        @include reponsive (tablet) {
+            font-size: 2.8rem;
+            font-weight: weight(4);
+        }
+        @include reponsive (laptop) {
+            font-size: 4rem;
+        }
+        @include reponsive (desktop) {
+            font-size: 5.4rem;
+        }
+      }
+      .banner-button {
+          a {font-size: 14px;}
+      }
+      @include reponsive(tablet) {
+          max-width: 50%;
+      }
+    }
+  }
+}

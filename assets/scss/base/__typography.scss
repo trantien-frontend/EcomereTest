@@ -1,0 +1,41 @@
+.title-section__small {
+  text-transform: uppercase;
+  padding: 15px 0;
+  display: inline-block;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background: var(--oragne);
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
+.title-section {
+  font-size: 2.5rem;
+  font-weight: weight(4);
+  line-height: 4rem;
+  @include reponsive(tablet) {
+    font-size: 3rem;
+  }
+}
+.title-section-2 {
+  position: relative;
+  font-size: 2.1rem;
+  line-height: 2.4rem;
+  font-weight: weight(4);
+  text-transform: uppercase;
+  padding: 10px 2rem;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background:var(--black);
+  }
+}
