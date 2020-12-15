@@ -2,7 +2,7 @@
   "products": [
     {
       "sys":{
-        "id":"1"
+        "id":"0"
       },
       "content":{
         "title":"6.variable with soldout product",
@@ -17,7 +17,7 @@
     },
     {
       "sys":{
-        "id":"2"
+        "id":"1"
       },
       "content":{
         "title":"3.variable product",
@@ -32,7 +32,7 @@
     },
     {
       "sys":{
-        "id":"3"
+        "id":"2"
       },
       "content":{
         "title":"new badge product",
@@ -47,7 +47,7 @@
     },
     {
       "sys":{
-        "id":"4"
+        "id":"3"
       },
       "content":{
         "title":"without shortcode product",
@@ -62,7 +62,7 @@
     },
     {
       "sys":{
-        "id":"5"
+        "id":"4"
       },
       "content":{
         "title":"without shortcode product",
@@ -77,7 +77,7 @@
     },
     {
       "sys":{
-        "id":"6"
+        "id":"5"
       },
       "content":{
         "title":"without shortcode product",
@@ -87,12 +87,12 @@
         }
       },
       "images":{
-        "image":"./images/tab-panel-1-6webp"
+        "image":"./images/tab-panel-1-6.webp"
       }
     },
     {
       "sys":{
-        "id":"7"
+        "id":"6"
       },
       "content":{
         "title":"without shortcode product",
@@ -107,7 +107,7 @@
     },
     {
       "sys":{
-        "id":"8"
+        "id":"7"
       },
       "content":{
         "title":"without shortcode product",
@@ -122,7 +122,7 @@
     },
     {
       "sys":{
-        "id":"9"
+        "id":"8"
       },
       "content":{
         "title":"without shortcode product",
@@ -137,7 +137,7 @@
     },
     {
       "sys":{
-        "id":"10"
+        "id":"9"
       },
       "content":{
         "title":"without shortcode product",
@@ -152,7 +152,7 @@
     },
     {
       "sys":{
-        "id":"11"
+        "id":"10"
       },
       "content":{
         "title":"without shortcode product",
@@ -167,7 +167,7 @@
     },
     {
       "sys":{
-        "id":"12"
+        "id":"11"
       },
       "content":{
         "title":"without shortcode product",
@@ -182,7 +182,7 @@
     },
     {
       "sys":{
-        "id":"1"
+        "id":"12"
       },
       "content":{
         "title":"6.variable with soldout product",
@@ -197,7 +197,7 @@
     },
     {
       "sys":{
-        "id":"2"
+        "id":"13"
       },
       "content":{
         "title":"3.variable product",
@@ -212,7 +212,7 @@
     },
     {
       "sys":{
-        "id":"3"
+        "id":"14"
       },
       "content":{
         "title":"new badge product",
@@ -227,7 +227,7 @@
     },
     {
       "sys":{
-        "id":"4"
+        "id":"15"
       },
       "content":{
         "title":"without shortcode product",
@@ -242,7 +242,7 @@
     },
     {
       "sys":{
-        "id":"5"
+        "id":"16"
       },
       "content":{
         "title":"without shortcode product",
@@ -257,7 +257,7 @@
     },
     {
       "sys":{
-        "id":"6"
+        "id":"17"
       },
       "content":{
         "title":"without shortcode product",
@@ -272,7 +272,7 @@
     },
     {
       "sys":{
-        "id":"7"
+        "id":"18"
       },
       "content":{
         "title":"without shortcode product",
@@ -287,7 +287,7 @@
     },
     {
       "sys":{
-        "id":"8"
+        "id":"19"
       },
       "content":{
         "title":"without shortcode product",
@@ -302,7 +302,7 @@
     },
     {
       "sys":{
-        "id":"9"
+        "id":"20"
       },
       "content":{
         "title":"without shortcode product",
@@ -317,7 +317,7 @@
     },
     {
       "sys":{
-        "id":"10"
+        "id":"21"
       },
       "content":{
         "title":"without shortcode product",
@@ -332,7 +332,7 @@
     },
     {
       "sys":{
-        "id":"11"
+        "id":"22"
       },
       "content":{
         "title":"without shortcode product",
@@ -347,7 +347,7 @@
     },
     {
       "sys":{
-        "id":"12"
+        "id":"23"
       },
       "content":{
         "title":"without shortcode product",
@@ -362,7 +362,7 @@
     },
     {
       "sys":{
-        "id":"1"
+        "id":"24"
       },
       "content":{
         "title":"6.variable with soldout product",
@@ -377,7 +377,7 @@
     },
     {
       "sys":{
-        "id":"2"
+        "id":"25"
       },
       "content":{
         "title":"3.variable product",
@@ -392,7 +392,7 @@
     },
     {
       "sys":{
-        "id":"3"
+        "id":"26"
       },
       "content":{
         "title":"new badge product",
@@ -407,7 +407,7 @@
     },
     {
       "sys":{
-        "id":"4"
+        "id":"27"
       },
       "content":{
         "title":"without shortcode product",
@@ -422,7 +422,7 @@
     },
     {
       "sys":{
-        "id":"5"
+        "id":"28"
       },
       "content":{
         "title":"without shortcode product",
@@ -437,7 +437,7 @@
     },
     {
       "sys":{
-        "id":"6"
+        "id":"29"
       },
       "content":{
         "title":"without shortcode product",
@@ -452,7 +452,7 @@
     },
     {
       "sys":{
-        "id":"7"
+        "id":"30"
       },
       "content":{
         "title":"without shortcode product",
@@ -467,7 +467,7 @@
     },
     {
       "sys":{
-        "id":"8"
+        "id":"31"
       },
       "content":{
         "title":"without shortcode product",
@@ -482,7 +482,7 @@
     },
     {
       "sys":{
-        "id":"9"
+        "id":"32"
       },
       "content":{
         "title":"without shortcode product",
@@ -497,7 +497,7 @@
     },
     {
       "sys":{
-        "id":"10"
+        "id":"33"
       },
       "content":{
         "title":"without shortcode product",
@@ -512,7 +512,7 @@
     },
     {
       "sys":{
-        "id":"11"
+        "id":"34"
       },
       "content":{
         "title":"without shortcode product",
@@ -527,7 +527,7 @@
     },
     {
       "sys":{
-        "id":"12"
+        "id":"35"
       },
       "content":{
         "title":"without shortcode product",
