@@ -7,15 +7,25 @@
 @import "./base/_typography";
 
 @import "./component/_button";
+@import "./component/_slider";
 @import "./component/_tab";
+@import "./component/_card";
+@import "./component/_loading";
 
 @import "./layout/head";
+@import "./layout/_breadcrumbs";
 @import "./layout/_banner";
 @import "./layout/_collection";
 @import "./layout/_feature";
+@import "./layout/_about";
+@import "./layout/_blog";
+@import "./layout/_footer";
 
-@import "./vendor/_slick";
-@import "./vendor/_slick-theme";
+@import "./page/_home";
+@import "./page/_cart";
+@import "./page/_shop";
+
+
 
 
 

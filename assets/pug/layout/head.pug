@@ -2,7 +2,7 @@
     .container
         .head-container
             .head-logo 
-                .logo
+                a(class="logo" href="index.html")
                     img(src="./images/nav-logo.webp", alt="Logo")
             div(class="head-search-area order-lg-1")
                 ul
@@ -17,6 +17,22 @@
                             span(class="flaticon-shopping-cart")
                                 span(class="cart-count") 0
                             span(class="cart-total") $0.00
+                        .cart__dropdown
+                            h4(class="cart__dropdown-message") Your cart is currently empty
+                            //- .cart__dropdown-inner
+                            //-     .single-product__img
+                            //-         img(src="./images/tab-panel-1-1.webp", alt="")
+                            //-     .single-product__text
+                            //-         a(class="single-product__text-name" href="#") WITHOUT SHORTCODE PRODUCT
+                            //-         span.single-product__text-quantiny 1
+                            //-         h4.single-product__text-price $50.00
+                            //-     span(class="fas fa-trash-alt remove-product")
+                            //- .cart__dropdown-total 
+                            //-     span(class="") Total
+                            //-     span(class="cart-total") $0.00
+                            //- .cart__dropdown-btn 
+                            //-     a(href="#" class="view-cart") view cart
+                            //-     a(href="#" class="check-cart") check cart
                 .head-mobile
                     .head-mobile__bars
                         div(class="bar bar--top")
@@ -25,28 +41,85 @@
             .head-nav
                 ul.nav 
                     li.nav-item 
-                        a(href="#" class="nav-link") home
+                        a(href="index.html" class="nav-link") home
                             span(class="fas fa-angle-down")
                             div(class="nav-plus")
                                 span(class="fas fa-plus")
+                        .sub-menu 
+                            ul.nav-sub
+                                each home in ['home shop 1','home shop 2','home shop 3','home shop 4','home shop 5','home shop 6','home shop 7','home shop 8','home shop RLT']
+                                    li.nav-sub__list
+                                        a.nav-sub__link= home
                     li.nav-item 
-                        a(href="#" class="nav-link") shop
+                        a(href="shop.html" class="nav-link") shop
                             span(class="fas fa-angle-down")
                             div(class="nav-plus")
                                 span(class="fas fa-plus")
+                        .sub-menu
+                            ul.nav-sub
+                                each shop in ['bed','nightstands','accessories','furniture list']
+                                    li.nav-sub__list
+                                        a.nav-sub__link= shop
+                                            div(class="nav-plus")
+                                                span(class="fas fa-plus")
+                                        -const beds = ['platform beds','storage beds','regular beds','sleigh beds','mordern beds']
+                                        -const nightstands = ['wooden stand','storage stand','barrel stand','black stand','beside stand']
+                                        -const accessories = ['bow ties','belts','bags & purses','beauty coats','bags']
+                                        -const furnitureList = ['caps & hats','sofa','couch','chair','block case']
+                                            if shop == 'bed'
+                                                .sub-menu__child
+                                                    ul.nav-sub__child
+                                                        each bed in beds 
+                                                            li.nav-sub__child-list
+                                                                a.nav-sub__child-link= bed 
+                                            if shop == 'nightstands'
+                                                .sub-menu__child
+                                                    ul.nav-sub__child
+                                                        each nightstand in nightstands 
+                                                            li.nav-sub__child-list
+                                                                a.nav-sub__child-link= nightstand 
+                                            if shop == 'accessories'
+                                                .sub-menu__child
+                                                    ul.nav-sub__child
+                                                        each accessorie in accessories 
+                                                            li.nav-sub__child-list
+                                                                a.nav-sub__child-link= accessorie 
+                                            if shop == 'furniture list'
+                                                .sub-menu__child
+                                                    ul.nav-sub__child
+                                                        each furniture in furnitureList 
+                                                            li.nav-sub__child-list
+                                                                a.nav-sub__child-link= furniture 
+                                        
                     li.nav-item 
                         a(href="#" class="nav-link") product
                             span(class="fas fa-angle-down")
                             div(class="nav-plus")
-                                span(class="fas fa-plus")
+                                span(class="fas fa-plus  ")
+                        .sub-menu
+                            ul.nav-sub
+                                -const products = ['simple product','variable product','affiliate link product','soldout product','countdown product']
+                                    each product in products
+                                        li.nav-sub__list
+                                            a.nav-sub__link= product
                     li.nav-item 
                         a(href="#" class="nav-link") blog
                             span(class="fas fa-angle-down")
                             div(class="nav-plus")
-                                span(class="fas fa-plus")
+                                span(class="fas fa-plus  ")
+                        .sub-menu
+                            ul.nav-sub
+                                each blog in ['blog','blog details']
+                                    li.nav-sub__list
+                                        a.nav-sub__link= blog
                     li.nav-item 
                         a(href="#" class="nav-link") page
                             span(class="fas fa-angle-down")
                             div(class="nav-plus")
-                                span(class="fas fa-plus")
+                                span(class="fas fa-plus  ")
+                        .sub-menu
+                            ul.nav-sub
+                                each page in ['contact us','about us','faq']
+                                    li.nav-sub__list
+                                        a.nav-sub__link= page
             

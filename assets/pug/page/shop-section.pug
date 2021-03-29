@@ -1,0 +1,165 @@
+.shop-section
+    .container
+        .shop-section__content  
+            .row
+                -const classLeft = ['col-lg-3','col-md-12','col-12']
+                -const classRight = ['col-lg-9','col-md-12','col-12']
+                    div(class=classLeft)
+                        .shop-sidebar
+                            h3(class="shop-sidebar-title") search 
+                            .shop-sidebar__form
+                                input(type="text" placeholder="Search out store")
+                                span(class="flaticon-search")
+                        .shop-sidebar
+                            h3(class="shop-sidebar-title") CUSTOM MENU
+                            .shop-sidebar__check
+                                ul
+                                    li 
+                                        a(href="index.html") home
+                                    li 
+                                        a(class="acitve") shop
+                                    li 
+                                        a(href="#") product
+                                    li 
+                                        a(href="#") blog
+                                    li 
+                                        a(href="#") page
+                        .shop-sidebar 
+                            h3(class="shop-sidebar-title") TOP RATED PRODUCTS
+                        .shop-sidebar 
+                            h3(class="shop-sidebar-title") CATEGORIES
+                            .shop-sidebar__check
+                                ul
+                                    li 
+                                        a(href="#") best seller
+                                    li 
+                                        a(href="#") deal product
+                                    li 
+                                        a(href="#") most view
+                                    li 
+                                        a(href="#") new arrivals
+                                    li 
+                                        a(href="#") new products
+                        .shop-sidebar 
+                            h3(class="shop-sidebar-title") vendor
+                            .shop-sidebar__check
+                                ul
+                                    li 
+                                        a(href="#") vendor 1
+                                    li 
+                                        a(href="#") vendor 10
+                                    li 
+                                        a(href="#") vendor 11
+                                    li 
+                                        a(href="#") vendor 2
+                                    li 
+                                        a(href="#") vendor 3
+                        .shop-sidebar 
+                            h3(class="shop-sidebar-title") PRODUCTS TYPES
+                            .shop-sidebar__check
+                                ul
+                                    li 
+                                        a(href="#") type 1
+                                    li 
+                                        a(href="#") type 10
+                                    li 
+                                        a(href="#") type 11
+                                    li 
+                                        a(href="#") type 2
+                                    li 
+                                        a(href="#") type 3
+                        .shop-sidebar 
+                            h3(class="shop-sidebar-title") COLOR
+                            .shop-sidebar__check
+                                ul
+                                    li 
+                                        a(href="#") red
+                                    li 
+                                        a(href="#") green
+                                    li 
+                                        a(href="#") blue
+                                    li 
+                                        a(href="#") yellow
+                                    li 
+                                        a(href="#") white
+                        .shop-sidebar 
+                            h3(class="shop-sidebar-title") SIZE
+                            .shop-sidebar__check
+                                ul
+                                    li 
+                                        a(href="#") s
+                                    li 
+                                        a(href="#") m
+                                    li 
+                                        a(href="#") l
+                                    li 
+                                        a(href="#") xl
+                                    li 
+                                        a(href="#") xxl
+                        .shop-sidebar 
+                            h3(class="shop-sidebar-title") BANNER
+                            .shop-sidebar__banner 
+                                a(href="#") 
+                                    img(src="./images/banner-shopPage.webp", alt="")
+                        .shop-sidebar 
+                            h3(class="shop-sidebar-title") TAGS
+                            .shop-sidebar__tags
+                                .tags-item
+                                    a(class="tags-item-inner" href="#") black
+                                .tags-item
+                                    a(class="tags-item-inner" href="#") blue
+                                .tags-item
+                                    a(class="tags-item-inner" href="#") fiber
+                                .tags-item
+                                    a(class="tags-item-inner" href="#") gold
+                                .tags-item
+                                    a(class="tags-item-inner" href="#") gray
+                    div(class=classRight)
+                        .shop-layout
+                            .shop-topbar
+                                .shop-topbar__view
+                                    div(class="shop-topbar__view-button" data-view = "gridView" id="button-grid")
+                                        span(class="fa fa-th")
+                                    div(class="shop-topbar__view-button" id="button-list" data-view = "listView")
+                                        span(class="fa fa-th-list")
+                                .shop-topbar__select
+                                    label(for="sort") Sort By
+                                    select(name="sort" id="sort")
+                                        option(value="title-ascending" ) Alphabetically, A-Z
+                                        option(value="title-descending") Alphabetically, Z-A
+                                        option(value="price-ascending") Price, low to high
+                                        option(value="price-descending") Price, high to low
+                                    p(class="show-products") Showing 1 - 18 of 33 result
+                            .shop-products
+                                //- .shop-products-grid
+                                    .row 
+                                //- .shop-products-list
+                                //-     .card-list
+                                //-         .card-list__img 
+                                //-             <img src="./images/tab-panel-1-1.webp" alt="">
+                                //-             div(class="button-view")
+                                //-                 span(class="flaticon-search")
+                                //-         .card-list__content
+                                //-             a.card-list__content-title helllllll
+                                //-             .card-list__content-price  
+                                //-                 span.now-price $111
+                                //-                 span.regular-price $222
+                                //-             p.card-list__content-dsc Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                                //-             .card-list__content-button  
+                                //-                 div(class="button-add" id="add-cart" data-id="1")
+                                //-                     span(class="flaticon-shopping-cart")
+                                //-                 div(class="button-heart")
+                                //-                     span(class="flaticon-heart")
+                            .shop-pagination
+                                //- ul.shop-pagination__list
+                                //-     li(class='shop-pagiantion__list-item' id="prev") prev
+                                //-     li(class='shop-pagiantion__list-item') 1
+                                //-     li(class='shop-pagiantion__list-item') 2
+                                //-     li(class='shop-pagiantion__list-item' id="next") Next
+
+
+
+
+
+
+

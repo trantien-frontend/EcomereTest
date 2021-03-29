@@ -5,9 +5,9 @@
         "id":"0"
       },
       "content":{
-        "title":"6.variable with soldout product",
+        "title":"6. Variable with soldout product",
         "price":{
-          "nowprice":"$55.00",
+          "nowprice":"55.00",
           "oldprice":"$75.00"
         }
       },
@@ -20,9 +20,9 @@
         "id":"1"
       },
       "content":{
-        "title":"3.variable product",
+        "title":"5. Simple product",
         "price":{
-          "nowprice":"$40.00",
+          "nowprice":"40.00",
           "oldprice":"$85.00"
         }
       },
@@ -35,9 +35,9 @@
         "id":"2"
       },
       "content":{
-        "title":"new badge product",
+        "title":"9. Without shortcode product",
         "price":{
-          "nowprice":"$80.00",
+          "nowprice":"50.00",
           "oldprice":""
         }
       },
@@ -50,9 +50,9 @@
         "id":"3"
       },
       "content":{
-        "title":"without shortcode product",
+        "title":"7. Sample affiliate product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"80.00",
           "oldprice":""
         }
       },
@@ -65,9 +65,9 @@
         "id":"4"
       },
       "content":{
-        "title":"without shortcode product",
+        "title":"3. Variable product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -80,10 +80,10 @@
         "id":"5"
       },
       "content":{
-        "title":"without shortcode product",
+        "title":"2. New badge product",
         "price":{
-          "nowprice":"$79.00",
-          "oldprice":""
+          "nowprice":"19.00",
+          "oldprice":"$29.00"
         }
       },
       "images":{
@@ -95,9 +95,9 @@
         "id":"6"
       },
       "content":{
-        "title":"without shortcode product",
+        "title":"4. Soldout product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -110,9 +110,9 @@
         "id":"7"
       },
       "content":{
-        "title":"without shortcode product",
+        "title":"11. Product with video",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"29.00",
           "oldprice":""
         }
       },
@@ -125,9 +125,9 @@
         "id":"8"
       },
       "content":{
-        "title":"without shortcode product",
+        "title":"Dummy product name",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"39.00",
           "oldprice":""
         }
       },
@@ -140,10 +140,10 @@
         "id":"9"
       },
       "content":{
-        "title":"without shortcode product",
+        "title":"Demo product title",
         "price":{
-          "nowprice":"$79.00",
-          "oldprice":""
+          "nowprice":"19.00",
+          "oldprice":" $21.00"
         }
       },
       "images":{
@@ -155,9 +155,9 @@
         "id":"10"
       },
       "content":{
-        "title":"without shortcode product",
+        "title":"Dummy product name",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"80.00",
           "oldprice":""
         }
       },
@@ -170,10 +170,10 @@
         "id":"11"
       },
       "content":{
-        "title":"without shortcode product",
+        "title":"Demo product title",
         "price":{
-          "nowprice":"$79.00",
-          "oldprice":""
+          "nowprice":"19.00",
+          "oldprice":"$29.00"
         }
       },
       "images":{
@@ -187,7 +187,7 @@
       "content":{
         "title":"6.variable with soldout product",
         "price":{
-          "nowprice":"$55.00",
+          "nowprice":"55.00",
           "oldprice":"$75.00"
         }
       },
@@ -202,7 +202,7 @@
       "content":{
         "title":"3.variable product",
         "price":{
-          "nowprice":"$40.00",
+          "nowprice":"40.00",
           "oldprice":"$85.00"
         }
       },
@@ -217,7 +217,7 @@
       "content":{
         "title":"new badge product",
         "price":{
-          "nowprice":"$80.00",
+          "nowprice":"80.00",
           "oldprice":""
         }
       },
@@ -232,7 +232,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -247,7 +247,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -262,12 +262,12 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
       "images":{
-        "image":"./images/tab-panel-1-6webp"
+        "image":"./images/tab-panel-1-6.webp"
       }
     },
     {
@@ -277,7 +277,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -292,7 +292,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -307,7 +307,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -322,7 +322,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -337,7 +337,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -352,7 +352,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -367,7 +367,7 @@
       "content":{
         "title":"6.variable with soldout product",
         "price":{
-          "nowprice":"$55.00",
+          "nowprice":"55.00",
           "oldprice":"$75.00"
         }
       },
@@ -382,7 +382,7 @@
       "content":{
         "title":"3.variable product",
         "price":{
-          "nowprice":"$40.00",
+          "nowprice":"40.00",
           "oldprice":"$85.00"
         }
       },
@@ -397,7 +397,7 @@
       "content":{
         "title":"new badge product",
         "price":{
-          "nowprice":"$80.00",
+          "nowprice":"80.00",
           "oldprice":""
         }
       },
@@ -412,7 +412,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -427,7 +427,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -442,12 +442,12 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
       "images":{
-        "image":"./images/tab-panel-1-6webp"
+        "image":"./images/tab-panel-1-6.webp"
       }
     },
     {
@@ -457,7 +457,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -472,7 +472,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -487,7 +487,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -502,7 +502,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -517,7 +517,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },
@@ -532,7 +532,7 @@
       "content":{
         "title":"without shortcode product",
         "price":{
-          "nowprice":"$79.00",
+          "nowprice":"79.00",
           "oldprice":""
         }
       },

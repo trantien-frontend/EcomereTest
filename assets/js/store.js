@@ -1,42 +1,29 @@
 async function getDatas() {
-  try {
-    let getData = await fetch("db.json");
-    let datas = await getData.json();
-    return datas;
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-//Tab-Product
-function getProduct() {
-  getDatas().then((data) => {
-    let {products} = data;
-    products = products.map(product=>{
-        let {id} = product.sys;
-        let {title, price} = product.content; 
-        let {nowprice, oldprice} = price; 
-        let {image} = product.images;
-        return {id,title,oldprice,nowprice,image}
-    })
-    saveProducts(products,'products');
-    tabSell(products)
+  let getData = await fetch("../db.json");
+  let datas = await getData.json();
+  let { products } = datas;
+  products = products.map((product) => {
+    let { id } = product.sys;
+    let { title, price } = product.content;
+    let { nowprice, oldprice } = price;
+    let { image } = product.images;
+    return { id, title, oldprice, nowprice, image };
   });
+  return products;
 }
-function tabSell (products) {
-    let newArr = [...products]
-    let arr = newArr.slice(0,12);
-    const tabActive = document.querySelector('')
-    renderTab(newArr);
+function storageSaveProducts(products) {
+  localStorage.setItem("products", JSON.stringify(products));
 }
-function renderTab (product,tabActive) {
-    
+function storageGetProducts() {
+  let products = JSON.parse(localStorage.getItem("products"));
+  return products;
 }
-function saveProducts (product,name) {
-    localStorage.setItem(name,JSON.stringify(product))
+function storageSaveCart(products) {
+  localStorage.setItem("cart", JSON.stringify(products));
 }
-// Running 
-function running() {
-    getProduct();
+function storageGetCart() {
+  return localStorage.getItem("cart")
+    ? JSON.parse(localStorage.getItem("cart"))
+    : [];
 }
-running();
+// Running

@@ -1,0 +1,201 @@
+.shop-section {
+  padding: 2rem 0;
+  &__content {
+    .shop-sidebar {
+      padding-bottom: 15px;
+      &-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        padding-bottom: 2rem;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 10px;
+          width: 100%;
+          height: 1px;
+          background: rgb(243, 243, 243);
+        }
+      }
+      &__form {
+        position: relative;
+        input {
+          width: 100%;
+          padding: 5px;
+          outline: none;
+          &::-webkit-input-placeholder {
+            font-size: 15px;
+          }
+        }
+        span {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translatey(-50%);
+          cursor: pointer;
+          &::before {
+            margin-left: 0;
+            font-weight: weight(7);
+            font-size: 12px;
+          }
+        }
+      }
+      &__check {
+        ul {
+          li {
+            display: block;
+            .acitve {
+              color: var(--oragne);
+              &::before {
+                content: "\f14a";
+              }
+            }
+            &:last-child {
+              a {
+                padding-bottom: 0;
+              }
+            }
+          }
+          a {
+            text-transform: capitalize;
+            display: block;
+            margin-bottom: 10px;
+            color: var(--black);
+            padding-left: 2rem;
+            position: relative;
+            &:hover {
+              color: var(--oragne);
+            }
+            &::before {
+              content: "\f0c8";
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translatey(-50%);
+              font-family: "Font Awesome 5 Free";
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      &__tags {
+        @include flexbox(flex, center, flex-start);
+        flex-wrap: wrap;
+        margin-top: 10px;
+        .tags-item {
+          border: 1px solid #000;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          &-inner {
+            display: block;
+            padding: 10px 15px;
+            text-transform: capitalize;
+            color: var(--black);
+            transition: 0.5s all;
+            &:hover {
+              background: var(--oragne);
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+    .shop-layout {
+      .shop-topbar {
+        @include flexbox(flex, center, space-between);
+        padding-bottom: 2rem;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 10px;
+          width: 100%;
+          height: 1px;
+          background: rgb(230, 230, 230);
+        }
+        &__view {
+          &-button {
+            display: inline-block;
+            cursor: pointer;
+            span {
+              padding: 8px 6px;
+              font-size: 2rem;
+              transition: 0.5s all;
+              &:hover {
+                background: var(--black);
+                color: var(--white);
+              }
+            }
+          }
+          &--active {
+            span {
+              background: var(--black);
+              color: var(--white);
+            }
+          }
+        }
+        &__select {
+          label {
+            font-weight: weight(6);
+          }
+          #sort {
+            appearance: none;
+            padding: 5px 15px;
+            font-size: 15px;
+            text-transform: capitalize;
+            border: 1px solid #e6e6e6;
+            outline: none;
+            margin-left: 10px;
+            option {
+              font-size: 15px;
+              display: block;
+              padding: 5px 0;
+            }
+          }
+          .show-products {
+            display: inline-block;
+            padding-left: 2rem;
+          }
+        }
+      }
+      .shop-pagination {
+        padding-top: 2rem;
+        text-align: right;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 10px;
+          width: 100%;
+          height: 1px;
+          background: #e6e6e6;
+        }
+        &__list {
+          display: inline-block;
+          &-item {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            text-align: center;
+            line-height: 40px;
+            margin: 2px;
+            border: 1px solid #eee;
+            cursor: pointer;
+            &--active {
+              background: var(--black);
+              color: var(--white);
+            }
+          }
+          .disabled {
+            cursor: no-drop;
+            background: var(--black);
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}

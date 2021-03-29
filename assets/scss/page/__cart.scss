@@ -1,0 +1,246 @@
+.table-section {
+  padding: 2rem 0;
+  .table {
+    width: 100%;
+    border-spacing: 0px;
+    thead {
+      display: none;
+      width: 100%;
+      @include reponsive(tablet) {
+        display: table-header-group;
+      }
+    }
+    tbody {
+      tr {
+        border: 1px solid #ddd;
+        @include flexbox(flex, center, center);
+        flex-wrap: wrap;
+        @include reponsive(tablet) {
+          display: table-row;
+        }
+      }
+    }
+    &-title {
+      text-transform: capitalize;
+      border-left: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+      font-weight: weight(4);
+      background: #f7f7f7;
+      &:last-child {
+        border-right: 1px solid #ddd;
+      }
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          width: 10%;
+          @if $i == 2 {
+            width: 25%;
+          }
+          @if $i == 3 {
+            width: 35%;
+          }
+        }
+      }
+    }
+    &-content {
+      text-align: center;
+      padding: 15px;
+      width: 100%;
+      &__remove {
+        display: inline-block;
+        transform: rotate(45deg);
+        cursor: pointer;
+        transition: 0.5s all;
+        span {
+          font-size: 2rem;
+        }
+        &:hover {
+          color: var(--oragne);
+        }
+      }
+      &__img {
+        width: 50%;
+        margin: 0 auto;
+        @include reponsive(laptop) {
+          width: 70%;
+        }
+        @include reponsive(tablet) {
+          width: 70%;
+        }
+      }
+      &__title {
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 1.8rem;
+        color: var(--black);
+        transition: 0.5s all;
+        &:hover {
+          color: var(--oragne);
+        }
+      }
+      &__quantity {
+        position: relative;
+        .quantity-value {
+          text-align: center;
+          width: 100%;
+          display: inline-block;
+          padding: 10px;
+          outline: none;
+        }
+        .quantity-dec {
+          right: 10px;
+          top: 50%;
+          transform: translatey(-50%);
+          @include reponsive(tablet) {
+            right: 5px;
+          }
+        }
+        .quantity-inc {
+          left: 10px;
+          top: 50%;
+          transform: translatey(-50%);
+          @include reponsive(tablet) {
+            left: 5px;
+          }
+        }
+        span {
+          font-size: 2rem;
+          position: absolute;
+          cursor: pointer;
+        }
+      }
+      @include reponsive(tablet) {
+        width: auto;
+        border-left: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        &:last-child {
+          border-right: 1px solid #ddd;
+        }
+      }
+      @include reponsive(laptop) {
+        width: auto;
+        border-left: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        &:last-child {
+          border-right: 1px solid #ddd;
+        }
+      }
+    }
+  }
+  .cart-dynamic {
+    padding-top: 2rem;
+    &__all {
+      @include reponsive(tablet) {
+        @include flexbox(flex, flex-start, flex-start);
+      }
+      @include reponsive(laptop) {
+        @include flexbox(flex, flex-start, flex-start);
+      }
+    }
+    &__coupon {
+      width: 100%;
+      .button--dynamic {
+        text-align: center;
+        width: 100%;
+        &:nth-child(2) {
+          margin-top: 10px;
+        }
+      }
+      .coupon__text {
+        padding: 15px 0;
+        h3 {
+          font-size: 2.2rem;
+          font-weight: weight(4);
+          padding-bottom: 10px;
+        }
+        &-input {
+          width: 100%;
+          height: 100px;
+          outline: none;
+          border: 1px solid #000;
+        }
+      }
+      @include reponsive(tablet) {
+        width: 70%;
+        .button--dynamic {
+          width: auto;
+          &:nth-child(2) {
+            margin-left: 15px;
+            margin-top: 0;
+          }
+        }
+      }
+      @include reponsive(laptop) {
+        width: 70%;
+        .button--dynamic {
+          &:nth-child(2) {
+            margin-left: 15px;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    &__coupon-2 {
+      width: 100%;
+      text-align: right;
+      .button--dynamic {
+        text-align: center;
+        width: 100%;
+      }
+      @include reponsive(tablet) {
+        width: 30%;
+        .button--dynamic {
+          width: auto;
+        }
+      }
+      @include reponsive(laptop) {
+        width: 30%;
+      }
+    }
+    &__total {
+      margin-top: 2rem;
+      h2 {
+        text-transform: capitalize;
+      }
+      ul {
+        padding: 15px 0;
+        .sub-total {
+          border-bottom: 1px solid #000;
+          border-left: 1px solid #000;
+          border-right: 1px solid #000;
+          padding: 15px;
+          @include flexbox(flex, center, space-between);
+          &:first-child {
+            border-top: 1px solid #000;
+          }
+          span {
+            font-weight: weight(6);
+            text-transform: capitalize;
+          }
+        }
+      }
+      @include reponsive(laptop) {
+        margin-top: 0;
+      }
+    }
+  }
+  .emptyCartMessage {
+    h2 {
+      font-size: 3rem;
+      font-weight: weight(4);
+    }
+    h3 {
+      font-size: 2.4rem;
+      font-weight: weight(4);
+    }
+    a {
+      padding-left: 4px;
+      transition: .5s all;
+      color: var(--black);
+      &:hover {
+        color: var(--oragne);
+      }
+    }
+  }
+}

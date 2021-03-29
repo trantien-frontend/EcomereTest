@@ -1,0 +1,43 @@
+.blog {
+    padding: 4rem 0;
+    &-title {
+        padding-bottom: 4rem;
+    }
+    &-slide {
+        &__item {
+            .blog-img {}
+            .blog-text {
+                padding: 3rem 0;
+                &__title {
+                    font-weight: weight(5);
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    &:hover {
+                        color: var(--oragne);
+                    }
+                }
+                &__author {
+                    font-size: 13px;
+                    text-transform: capitalize;
+                    padding-top: 15px;
+                    padding-bottom: 2.5rem;
+                    span {
+                        color:var(--oragne);
+                    }
+                }
+                &__btn {
+                    .btn-blog {
+                        text-transform: uppercase;
+                        text-decoration: underline;
+                        &:hover {
+                            color: var(--oragne);
+                        }
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            top: -90px;
+        }
+    }
+}

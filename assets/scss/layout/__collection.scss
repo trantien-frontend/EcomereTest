@@ -1,6 +1,6 @@
 .collection {
   &-partern {
-    background: url("../../images/collection-partent.webp");
+    background: url("../images/collection-partent.webp");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 8rem 0;
@@ -17,6 +17,16 @@
           padding: 15px;
           background: var(--white);
           margin-bottom: 15px;
+          &--mobile {
+            width: 50%;
+            margin: 15px auto;
+          }
+          @include reponsive (tablet) {
+            &--mobile {
+              margin: 0;
+              width: 100%;
+            }
+          }
       }
   }
 }

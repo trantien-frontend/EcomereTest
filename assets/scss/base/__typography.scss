@@ -2,6 +2,7 @@
   text-transform: uppercase;
   padding: 15px 0;
   display: inline-block;
+  color: var(--light-black);
   position: relative;
   &::before {
     content: "";
@@ -18,6 +19,7 @@
   font-size: 2.5rem;
   font-weight: weight(4);
   line-height: 4rem;
+  color: var(--light-black);
   @include reponsive(tablet) {
     font-size: 3rem;
   }
@@ -37,5 +39,14 @@
     width: 2px;
     height: 100%;
     background:var(--black);
+  }
+}
+.product-title {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  display: inline-block;
+  color: var(--black);
+  &:hover {
+    color: var(--oragne);
   }
 }

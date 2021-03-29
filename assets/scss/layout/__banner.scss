@@ -1,20 +1,49 @@
 .banner {
   padding: 2rem 0;
   &-slides {
+    position: relative;
+    &:hover {
+      .banner-slides__next {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
     &__item {
       height: 50vh;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      @include flexbox(flex, center, flex-end);
+      display: none;
+      &--active {
+        @include flexbox(flex, center, flex-end);
+        animation-name: fade;
+        animation-duration: 1s;
+        .banner-slides__text {
+          h5 {
+            animation-name: Scale ;
+            animation-duration: 1s;
+          }
+          h4 {
+            animation-name: Scale ;
+            animation-duration: 1s;
+          }
+          .banner-button {
+            animation-name: BottomToTop ;
+            animation-duration: 1s;
+          }
+        }
+      }
       &--one {
         background-image: url("../images/banner-1.webp");
       }
+      &--two {
+        background-image: url("../images/banner.webp");
+      }
       @include reponsive(tablet) {
-          height: 65vh;
+        height: 65vh;
       }
       @include reponsive(laptop) {
-          height: 70vh;
+        height: 70vh;
       }
     }
     &__text {
@@ -24,11 +53,11 @@
         font-size: 1.6rem;
         font-weight: weight(3);
         color: $pagaraph-1;
-        @include reponsive (tablet) {
-            font-size: 14px;
+        @include reponsive(tablet) {
+          font-size: 14px;
         }
-        @include reponsive (laptop) {
-            font-size: 1.7rem;
+        @include reponsive(laptop) {
+          font-size: 1.7rem;
         }
       }
       h4 {
@@ -38,22 +67,70 @@
         padding-top: 7.5px;
         padding-bottom: 2rem;
         text-transform: uppercase;
-        @include reponsive (tablet) {
-            font-size: 2.8rem;
-            font-weight: weight(4);
+        @include reponsive(tablet) {
+          font-size: 2.8rem;
+          font-weight: weight(4);
         }
-        @include reponsive (laptop) {
-            font-size: 4rem;
+        @include reponsive(laptop) {
+          font-size: 4rem;
         }
-        @include reponsive (desktop) {
-            font-size: 5.4rem;
+        @include reponsive(desktop) {
+          font-size: 5.4rem;
         }
       }
       .banner-button {
-          a {font-size: 14px;}
+        a {
+          font-size: 14px;
+        }
       }
       @include reponsive(tablet) {
-          max-width: 50%;
+        max-width: 50%;
+      }
+    }
+    &__next {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      @include flexbox(flex, center, center);
+      width: 5rem;
+      height: 5rem;
+      transform: translatey(-50%);
+      background: var(--white);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 5rem;
+      transition: 0.5s all;
+      visibility: hidden;
+      opacity: 0;
+      display: none;
+      @include reponsive (tablet) {
+        display: block;
+      }
+      cursor: pointer;
+      span {
+        font-size: 2rem;
+      }
+    }
+    &__prev {
+      @extend .banner-slides__next;
+      left: 10px;
+    }
+    &__dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translatex(-50%);
+      @include flexbox(flex, center, center);
+    }
+    &__dot {
+      width: 15px;
+      height: 15px;
+      background: var(--white);
+      border-radius: 50%;
+      margin: 5px;
+      cursor: pointer;
+      &--active {
+        background: gray;
       }
     }
   }

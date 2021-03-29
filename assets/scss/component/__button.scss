@@ -1,8 +1,84 @@
 .button {
-    font-size: 12px;
-    color: var(--white);
-    font-weight: weight(6);
-    text-transform: uppercase;
-    padding: 15px 3rem;
+  font-size: 12px;
+  font-weight: weight(6);
+  text-transform: uppercase;
+  padding: 15px 3rem;
+  transition: 0.5s all;
+  &--primary {
+    cursor: pointer;
     background: var(--oragne);
+    color: var(--white);
+    border: 1px solid var(--oragne);
+    &:hover {
+      background: var(--white);
+      color: var(--oragne);
+    }
+  }
+  &--dynamic {
+    color: var(--white);
+    background: var(--light-black);
+    display: inline-block;
+    &:hover {
+      background: var(--oragne);
+    }
+  }
+  &-add {
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    margin: 0 3px;
+    transition: 0.5s all;
+    span {
+      &::before {
+        font-size: 2.3rem;
+        margin: 0;
+        font-weight: weight(6);
+        color: var(--oragne);
+        transition: 0.5s all;
+      }
+    }
+    &:hover {
+      background: var(--oragne) !important;
+      span {
+        &::before {
+          color: var(--white);
+        }
+      }
+    }
+  }
+  &-heart {
+    @extend .button-add;
+  }
+  &-view {
+    position: absolute;
+      right: 15px;
+      bottom: 15px;
+      width: 40px;
+      height: 40px;
+      background: var(--white);
+      border-radius: 50%;
+      line-height: 40px;
+      text-align: center;
+      transition: 0.5s all;
+      span {
+        &::before {
+          font-size: 15px;
+          color: var(--oragne);
+          font-weight: weight(6);
+          margin: 0;
+          transition: 0.5s all;
+        }
+      }
+      &:hover {
+        background: var(--oragne);
+        span {
+          &::before {
+            color: var(--white);
+          }
+        }
+      }
+  }
 }

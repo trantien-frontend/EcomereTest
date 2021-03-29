@@ -1,0 +1,14 @@
+mixin breadcrumbs(page) 
+    .breadcrumbs
+        .container-fluid    
+            .breadcrumbs-container  
+                .row
+                    div(class="col-lg-7")
+                        .breadcrumbs-text 
+                            if page == 'shop'
+                                ul(class="breadcrumbs-text__list")
+                                    li 
+                                        a(href='index.html') Home
+                                    li 
+                                        a(href='#') product
+                                h1 product

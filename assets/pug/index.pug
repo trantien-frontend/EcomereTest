@@ -1,0 +1,33 @@
+include ./mixin/js.pug
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Indecor
+        //build:css css/styles.min.css
+        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet", href="./css/grid.css")
+        link(rel="stylesheet", href="./css/owl.carousel.css")
+        link(rel="stylesheet", href="./css/owl.theme.default.css")
+        link(rel="stylesheet", href="./font/flaticon.css")
+        //endbuild
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    body
+        -let page = 'index'
+        .wrapper
+            include ./layout/loading.pug   
+            include ./layout/head.pug   
+            include ./layout/banner.pug
+            include ./layout/feature.pug
+            include ./layout/collection.pug
+            include ./layout/product.pug
+            include ./layout/home-detail.pug
+            include ./layout/list-product.pug
+            include ./layout/about.pug
+            include ./layout/brand-slide.pug
+            include ./layout/blog.pug
+            include ./layout/footer.pug
+        +block-js(page)

@@ -22,13 +22,69 @@ ul {
 a {
   text-decoration: none;
 }
+.wrapper {
+  overflow: hidden;
+}
 :root {
-    --oragne: #ff7a5f; 
-    --black: #000; 
-    --light-back: #333;
-    --white: #fff; 
-    --gray: #cacaca;
+  --oragne: #ff7a5f;
+  --black: #000;
+  --light-black: #333;
+  --white: #fff;
+  --gray: #cacaca;
 }
 .max-height {
   height: 100%;
+}
+.product-price {
+  .now-price {
+    font-size: 2.4rem;
+    color: var(--oragne);
+  }
+  .regular-price {
+    @extend .now-price;
+    color: var(--black);
+    padding-left: 10px;
+    text-decoration: line-through;
+  }
+}
+.owl-prev {
+  margin-right: 5px;
+  outline: none;
+  span {
+    @include flexbox(flex,center,center);
+    width: 3rem;
+    height: 3rem;
+    background: var(--white);
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 2rem;
+    transition: .5s all;
+    &:hover {
+      background: var(--oragne);
+      border: none;
+      color: var(--white);
+    }
+  }
+}
+.owl-next {
+  outline: none;
+  span {
+    @include flexbox(flex,center,center);
+    width: 3rem;
+    height: 3rem;
+    background: var(--white);
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 2rem;
+    transition: .5s all;
+    &:hover {
+      background: var(--oragne);
+      border: none;
+      color: var(--white);
+    }
+  }
+}
+.loadding {
+  height: 100vh;
+  @include flexbox(flex,center,center);
 }

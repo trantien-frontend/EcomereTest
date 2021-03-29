@@ -1,0 +1,25 @@
+mixin block-js(page)
+    if page == 'index'
+        script(src="./vendor/jquery/jquery-3.5.1.js")
+        script(src="./vendor/carousel/owl.carousel.min.js")
+        //build:js js/index.min.js
+        script(src="./js/store.js")
+        script(src="./js/miniCart.js")
+        script(src="./js/main.js")
+        script(src="./js/home.js")
+        //endbuild
+    if page == 'cart'
+        //build:js js/cart.min.js
+        script(src="./js/store.js")
+        script(src="./js/miniCart.js")
+        script(src="./js/main.js")
+        script(src="./js/cart.js")
+        //endbuild
+    if page == 'shop'
+        //build:js js/shop.min.js
+        script(src="./js/sort.js")
+        script(src="./js/store.js")
+        script(src="./js/miniCart.js")
+        script(src="./js/main.js")
+        script(src="./js/shop.js")
+        //endbuild

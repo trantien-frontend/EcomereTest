@@ -4,91 +4,21 @@
                 h4(class="title-section-2") our
                     br 
                     |product
-                div(class="tab-button") 
-                    button(class="tab-button__prev" type="button")
-                        span(class="fas fa-angle-left")
-                    button(class="tab-button__next" type="button")
-                        span(class="fas fa-angle-right")
                 ul(class="tab-list")
                     li.tab-list__item
-                        a(class="tab-list__link tab-list__link--active") best seller 
+                        a(class="tab-list__link tab-list__link--active" data-tab="tab-sell") best seller 
                     li.tab-list__item
-                        a.tab-list__link deal product 
+                        a(class="tab-list__link" data-tab="tab-deal") deal product 
                     li.tab-list__item
-                        a.tab-list__link most view 
+                        a(class="tab-list__link" data-tab="tab-most") most view 
         .product-area__tabs
             //render-here
-            //product-tab start
             div(class="tab-panel tab-panel--active" id="tab-sell")
-                //- div(class="tab-items col-lg-3")
-                //-     div(class="tab-item")
-                //-         .tab-item__img
-                //-             img(src="./images/tab-panel-1-1.webp", alt="")
-                //-             .tab-icon
-                //-                 .action-cart
-                //-                     .add-cart
-                //-                         span(class="flaticon-shopping-cart")
-                //-                     .into-page
-                //-                         span(class="flaticon-heart")
-                //-                 .view-cart 
-                //-                     span(class="flaticon-search")
-                //-         .tab-item__content 
-                //-             h4 6. variable with soldout product
-                //-             .tab-price
-                //-                 span.now-price $55.00
-                //-                 span.regular-price $75.00
-                //-     div(class="tab-item")
-                //-         .tab-item__img
-                //-             img(src="./images/tab-panel-1-2.webp", alt="")
-                //-             .tab-icon
-                //-                 .action-cart
-                //-                     .add-cart
-                //-                         span(class="flaticon-shopping-cart")
-                //-                     .into-page
-                //-                         span(class="flaticon-heart")
-                //-                 .view-cart 
-                //-                     span(class="flaticon-search")
-                //-         .tab-item__content 
-                //-             h4 6. variable with soldout product
-                //-             .tab-price
-                //-                 span.now-price $55.00
-                //-                 span.regular-price $75.00
             //product-tab end          
             //product-tab start
             div(class="tab-panel" id="tab-deal")
-                //- div(class="tab-item col-lg-3")
-                //-     .tab-item__img
-                //-         img(src="./images/tab-home-1.webp", alt="")
-                //-         .tab-icon
-                //-             .action-cart
-                //-                 .add-cart
-                //-                     span(class="flaticon-shopping-cart")
-                //-                 .into-page
-                //-                     span(class="flaticon-heart")
-                //-             .view-cart 
-                //-                 span(class="flaticon-search")
-                //-     .tab-item__content 
-                //-         h4 6. variable with soldout product
-                //-         .tab-price
-                //-             span.now-price $55.00
-                //-             span.regular-price $75.00
             //product-tab end          
             //product-tab start
-            //- div(class="tab-panel" id="tab-most")
-                //- div(class="tab-item col-lg-3")
-                //-     .tab-item__img
-                //-         img(src="./images/tab-home-1.webp", alt="")
-                //-         .tab-icon
-                //-             .action-cart
-                //-                 .add-cart
-                //-                     span(class="flaticon-shopping-cart")
-                //-                 .into-page
-                //-                     span(class="flaticon-heart")
-                //-             .view-cart 
-                //-                 span(class="flaticon-search")
-                //-     .tab-item__content 
-                //-         h4 6. variable with soldout product
-                //-         .tab-price
-                //-             span.now-price $55.00
-                //-             span.regular-price $75.00
+            div(class="tab-panel" id="tab-most")
+            //product-tab start
             //product-tab end          
