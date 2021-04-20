@@ -4,22 +4,26 @@ mixin block-js(page)
         script(src="./vendor/carousel/owl.carousel.min.js")
         //build:js js/index.min.js
         script(src="./js/store.js")
-        script(src="./js/miniCart.js")
+        //- script(src="./js/miniCart.js")
+        script(src="./js/CloneMiniCart.js")
         script(src="./js/main.js")
         script(src="./js/home.js")
         //endbuild
     if page == 'cart'
         //build:js js/cart.min.js
         script(src="./js/store.js")
-        script(src="./js/miniCart.js")
+        //- script(src="./js/miniCart.js")
+        script(src="./js/CloneMiniCart.js")
         script(src="./js/main.js")
-        script(src="./js/cart.js")
+        //- script(src="./js/cart.js")
+        script(src="./js/cloneCart.js")
         //endbuild
     if page == 'shop'
         //build:js js/shop.min.js
         script(src="./js/sort.js")
         script(src="./js/store.js")
-        script(src="./js/miniCart.js")
+        script(src="./js/cloneShop.js")
+        //- script(src="./js/miniCart.js")
+        script(src="./js/CloneMiniCart.js")
         script(src="./js/main.js")
-        script(src="./js/shop.js")
         //endbuild

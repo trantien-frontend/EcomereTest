@@ -1,9 +1,9 @@
 let cartItems = [];
 //add-mini-cart
 function miniCart() {
-  let buttonCart = [...document.querySelectorAll("#add-cart")];
+  let buttonCart = [...document.querySelectorAll('#add-cart')];
   buttonCart.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener('click', () => {
       let id = button.dataset.id;
       let cartItem = { ...findProduct(id), amount: 1 };
       cartItems = [...cartItems, cartItem];
@@ -18,9 +18,9 @@ function miniCart() {
       storageSaveCart(cartItems);
       renderMiniCart(cartItems);
       setMiniCartValue(cartItems);
-      let messageNull = document.querySelector(".cart__dropdown-message");
+      let messageNull = document.querySelector('.cart__dropdown-message');
       if (messageNull) {
-        messageNull.style.display = "none";
+        messageNull.style.display = 'none';
       }
       clickRemoveMiniCart();
     });
@@ -28,19 +28,19 @@ function miniCart() {
 }
 //remove UI mini-cart
 function clickRemoveMiniCart() {
-  let removeBtns = document.querySelectorAll(".remove-product");
+  let removeBtns = document.querySelectorAll('.remove-product');
   removeBtns.forEach((removeBtn) => {
-    removeBtn.addEventListener("click", () => {
+    removeBtn.addEventListener('click', () => {
       removeCart(removeBtn.dataset.id);
       removeBtn.parentElement.remove();
-      let isTotalItems = document.querySelector(".cart-count").innerText;
+      let isTotalItems = document.querySelector('.cart-count').innerText;
       if (isTotalItems == 0) {
-        let cartHome = document.querySelector(".cart__dropdown");
-        document.querySelector(".cart__dropdown-total").style.display = "none";
-        document.querySelector(".cart__dropdown-btn").style.display = "none";
-        let messageNullCart = document.createElement("h4");
-        messageNullCart.setAttribute("class", "cart__dropdown-message");
-        messageNullCart.innerText = "Your cart is currently empty";
+        let cartHome = document.querySelector('.cart__dropdown');
+        document.querySelector('.cart__dropdown-total').style.display = 'none';
+        document.querySelector('.cart__dropdown-btn').style.display = 'none';
+        let messageNullCart = document.createElement('h4');
+        messageNullCart.setAttribute('class', 'cart__dropdown-message');
+        messageNullCart.innerText = 'Your cart is currently empty';
         cartHome.appendChild(messageNullCart);
         cartItems = [];
       }
@@ -57,8 +57,8 @@ function findProduct(id) {
 }
 //render-mini-cart
 function renderMiniCart(carts) {
-  let cartHome = document.querySelector(".cart__dropdown");
-  let result = "";
+  let cartHome = document.querySelector('.cart__dropdown');
+  let result = '';
   let string = `
       <div class="cart__dropdown-total"> 
         <span>Total</span>
@@ -86,8 +86,8 @@ function renderMiniCart(carts) {
 }
 //mini-cart-value
 function setMiniCartValue(carts) {
-  let totalItems = document.querySelector(".cart-count");
-  let totalValues = document.querySelectorAll(".cart-total");
+  let totalItems = document.querySelector('.cart-count');
+  let totalValues = document.querySelectorAll('.cart-total');
   let itemsTotal = 0;
   let valueTotal = 0;
   carts.forEach((cart) => {

@@ -9,7 +9,7 @@
         padding-bottom: 2rem;
         position: relative;
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           bottom: 10px;
@@ -48,7 +48,7 @@
             .acitve {
               color: var(--oragne);
               &::before {
-                content: "\f14a";
+                content: '\f14a';
               }
             }
             &:last-child {
@@ -68,12 +68,12 @@
               color: var(--oragne);
             }
             &::before {
-              content: "\f0c8";
+              content: '\f0c8';
               position: absolute;
               left: 0;
               top: 50%;
               transform: translatey(-50%);
-              font-family: "Font Awesome 5 Free";
+              font-family: 'Font Awesome 5 Free';
               font-weight: 400;
             }
           }
@@ -107,7 +107,7 @@
         padding-bottom: 2rem;
         position: relative;
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           bottom: 10px;
@@ -128,11 +128,11 @@
                 color: var(--white);
               }
             }
-          }
-          &--active {
-            span {
-              background: var(--black);
-              color: var(--white);
+            &--active {
+              span {
+                background: var(--black) !important;
+                color: var(--white) !important;
+              }
             }
           }
         }
@@ -165,7 +165,7 @@
         text-align: right;
         position: relative;
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           top: 10px;

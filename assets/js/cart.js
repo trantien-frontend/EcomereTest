@@ -1,4 +1,4 @@
-let tableSection = document.querySelector(".table-section__content");
+let tableSection = document.querySelector('.table-section__content');
 // cart
 function cart() {
   let productsCart = storageGetCart();
@@ -12,10 +12,10 @@ function cart() {
   }
 }
 function renderCart(carts) {
-  let tBody = document.querySelector(".table tbody");
-  let tHead = document.querySelector(".table thead");
-  let cartDynamic = document.querySelector(".cart-dynamic");
-  let result = "";
+  let tBody = document.querySelector('.table tbody');
+  let tHead = document.querySelector('.table thead');
+  let cartDynamic = document.querySelector('.cart-dynamic');
+  let result = '';
   let tHeadContent = `
         <tr>
             <th class="table-title">remove</th>
@@ -66,9 +66,7 @@ function renderCart(carts) {
     result += `
         <tr>
         <td class="table-content"> 
-            <a class="table-content__remove button-remove" data-id="${
-              cart.id
-            }">;
+            <a class="table-content__remove button-remove" data-id="${cart.id}">;
                 <span class="fas fa-plus"></span>
             </a>
         </td>
@@ -86,8 +84,8 @@ function renderCart(carts) {
         <td class="table-content">
           <div class="table-content__quantity">
             <input class="quantity-value" data-id="${cart.id}" type="text" value="${
-              cart.amount
-            }"><span class="quantity-dec">+</span><span class="quantity-inc">- </span>
+      cart.amount
+    }"><span class="quantity-dec">+</span><span class="quantity-inc">- </span>
           </div>
         </td>
         <td class="table-content"><span class="table-content__total money">$${valueProduct.toFixed(
@@ -101,18 +99,18 @@ function renderCart(carts) {
   cartDynamic.innerHTML = cartDynamicInner;
 }
 function renderEmptyCart() {
-  let tableSection = document.querySelector(".table-section__content");
-  let emtyCart = document.createElement("div");
-  let h2 = document.createElement("h2");
-  let h3 = document.createElement("h3");
-  let p = document.createElement("p");
-  let a = document.createElement("a");
-  a.setAttribute("href", "#");
-  emtyCart.setAttribute("class", "emptyCartMessage");
-  h2.innerHTML = "Shopping Cart";
-  h3.innerHTML = "Your cart is currently empty!";
-  p.innerHTML = "Continue browsing";
-  a.innerHTML = "here";
+  let tableSection = document.querySelector('.table-section__content');
+  let emtyCart = document.createElement('div');
+  let h2 = document.createElement('h2');
+  let h3 = document.createElement('h3');
+  let p = document.createElement('p');
+  let a = document.createElement('a');
+  a.setAttribute('href', '#');
+  emtyCart.setAttribute('class', 'emptyCartMessage');
+  h2.innerHTML = 'Shopping Cart';
+  h3.innerHTML = 'Your cart is currently empty!';
+  p.innerHTML = 'Continue browsing';
+  a.innerHTML = 'here';
   p.appendChild(a);
   emtyCart.appendChild(h2);
   emtyCart.appendChild(h3);
@@ -121,7 +119,7 @@ function renderEmptyCart() {
 }
 function setCartValue(carts) {
   let totalValue = 0;
-  let totalBLocks = document.querySelectorAll(".total");
+  let totalBLocks = document.querySelectorAll('.total');
   carts.forEach((cart) => {
     totalValue += cart.amount * cart.nowprice;
   });
@@ -130,14 +128,14 @@ function setCartValue(carts) {
   });
 }
 function eventClick() {
-  let btnsRemove = document.querySelectorAll(".button-remove");
-  let btnUpdate = document.querySelector("#update-cart");
-  let btnClear = document.querySelector("#clear-cart");
-  let btnsPlus = document.querySelectorAll(".quantity-dec");
-  let btnsMinus = document.querySelectorAll(".quantity-inc");
+  let btnsRemove = document.querySelectorAll('.button-remove');
+  let btnUpdate = document.querySelector('#update-cart');
+  let btnClear = document.querySelector('#clear-cart');
+  let btnsPlus = document.querySelectorAll('.quantity-dec');
+  let btnsMinus = document.querySelectorAll('.quantity-inc');
   //remove
   btnsRemove.forEach((btnRemove) => {
-    btnRemove.addEventListener("click", () => {
+    btnRemove.addEventListener('click', () => {
       let id = btnRemove.dataset.id;
       removeCart(id);
       location.reload();
@@ -145,7 +143,7 @@ function eventClick() {
   });
   // btnPlus
   btnsPlus.forEach((btnPlus) => {
-    btnPlus.addEventListener("click", () => {
+    btnPlus.addEventListener('click', () => {
       let input = btnPlus.previousElementSibling;
       let count = +input.value;
       count++;
@@ -154,7 +152,7 @@ function eventClick() {
   });
   // btnMinus
   btnsMinus.forEach((btnMinus) => {
-    btnMinus.addEventListener("click", (e) => {
+    btnMinus.addEventListener('click', (e) => {
       let input = btnMinus.previousElementSibling.previousElementSibling;
       let count = +input.value;
       if (count == 0) {
@@ -166,38 +164,38 @@ function eventClick() {
     });
   });
   //update
-  btnUpdate.addEventListener("click", () => {
+  btnUpdate.addEventListener('click', () => {
     let getCarts = storageGetCart();
-    let inputs = document.querySelectorAll(".quantity-value");
-    inputs.forEach(input=>{
-        let id = input.dataset.id;
-        let amount = input.value; 
-        getCarts.map(item=>{
-            if (item.id == id) {
-                item.amount = amount;
-            }
-        })
-    })
+    let inputs = document.querySelectorAll('.quantity-value');
+    inputs.forEach((input) => {
+      let id = input.dataset.id;
+      let amount = input.value;
+      getCarts.map((item) => {
+        if (item.id == id) {
+          item.amount = amount;
+        }
+      });
+    });
     storageSaveCart(getCarts);
     location.reload();
   });
-  //btnCLear 
-  btnClear.addEventListener('click',()=>{
+  //btnCLear
+  btnClear.addEventListener('click', () => {
     storageSaveCart([]);
     location.reload();
-  })
+  });
 }
 function running() {
-  setting();
+  // setting();
   cart();
   breadcrumbs();
 }
-// section breadcrumbs 
-function breadcrumbs () {
-    let breadcrumbsContent = document.querySelector('.breadcrumbs-content');
-    let breadcrumbsInner = document.createElement('h1');
-    breadcrumbsInner.setAttribute('class','breadcrumbs-content__title');
-    breadcrumbsInner.innerText = 'your shopping cart';
-    breadcrumbsContent.appendChild(breadcrumbsInner);
+// section breadcrumbs
+function breadcrumbs() {
+  let breadcrumbsContent = document.querySelector('.breadcrumbs-content');
+  let breadcrumbsInner = document.createElement('h1');
+  breadcrumbsInner.setAttribute('class', 'breadcrumbs-content__title');
+  breadcrumbsInner.innerText = 'your shopping cart';
+  breadcrumbsContent.appendChild(breadcrumbsInner);
 }
 running();

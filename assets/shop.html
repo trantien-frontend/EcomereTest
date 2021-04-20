@@ -34,9 +34,7 @@
                 <li class="currency"><a href="#"><span class="flaticon-padlock"></span>
                     <ul class="currenct-dropdown"></ul></a></li>
                 <li class="cart"><a href="#"><span class="flaticon-shopping-cart"><span class="cart-count">0</span></span><span class="cart-total">$0.00</span></a>
-                  <div class="cart__dropdown">
-                    <h4 class="cart__dropdown-message">Your cart is currently empty</h4>
-                  </div>
+                  <div class="cart__dropdown"></div>
                 </li>
               </ul>
               <div class="head-mobile">
@@ -278,8 +276,8 @@
                 <div class="shop-layout">
                   <div class="shop-topbar">
                     <div class="shop-topbar__view">
-                      <div class="shop-topbar__view-button" data-view="gridView" id="button-grid"><span class="fa fa-th"></span></div>
-                      <div class="shop-topbar__view-button" id="button-list" data-view="listView"><span class="fa fa-th-list"></span></div>
+                      <div class="shop-topbar__view-button" data-view="grid" id="button-grid"><span class="fa fa-th"></span></div>
+                      <div class="shop-topbar__view-button" id="button-list" data-view="list"><span class="fa fa-th-list"></span></div>
                     </div>
                     <div class="shop-topbar__select">
                       <label for="sort">Sort By</label>
@@ -376,9 +374,9 @@
     <!--build:js js/shop.min.js-->
     <script src="./js/sort.js"></script>
     <script src="./js/store.js"></script>
-    <script src="./js/miniCart.js"></script>
+    <script src="./js/cloneShop.js"></script>
+    <script src="./js/CloneMiniCart.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/shop.js"></script>
     <!--endbuild-->
   </body>
 </html>

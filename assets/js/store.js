@@ -1,5 +1,5 @@
 async function getDatas() {
-  let getData = await fetch("../db.json");
+  let getData = await fetch("./db.json");
   let datas = await getData.json();
   let { products } = datas;
   products = products.map((product) => {

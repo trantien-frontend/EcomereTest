@@ -10,8 +10,8 @@ const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 const useref = require("gulp-useref");
 const gulpif = require("gulp-if");
-const cache = require('gulp-cache');
-const pug = require('gulp-pug');
+const cache = require("gulp-cache");
+const pug = require("gulp-pug");
 //
 const path = {
   images: {
@@ -31,16 +31,16 @@ const path = {
     dest: "dist/js",
   },
   pug: {
-    src:"./assets/pug/*.pug",
-    dest: "./assets/"
+    src: "./assets/pug/*.pug",
+    dest: "./assets/",
   },
   vendor: {
-    src: [
-      './assets/vendor/**'
-    ],
-    dest: [
-      'dist/vendor'
-    ]
+    src: ["./assets/vendor/**"],
+    dest: ["dist/vendor"],
+  },
+  font: {
+    src: ["./assets/flaticon/**"],
+    dest: ["dist/flaticon"],
   },
   output: "dist",
 };
@@ -49,11 +49,19 @@ function clean() {
   return del([path.output]);
 }
 function vendor() {
-  console.log('aaaa');
-  for(let i = 0 ; i < path.vendor.src.length; i ++){
-    src(path.vendor.src[i])
-      .pipe(dest(path.vendor.dest[i]));
-      return src(path.vendor.src);
+  for (let i = 0; i < path.font.src.length; i++) {
+    src(path.font.src[i]).pipe(dest(path.font.dest[i]));
+    return src(path.font.src);
+  }
+}
+function imageWebp() {
+  src("./assets/images/**/*.webp").pipe(dest("dist/images"));
+  return src("./assets/images/**/*.webp");
+}
+function font() {
+  for (let i = 0; i < path.vendor.src.length; i++) {
+    src(path.vendor.src[i]).pipe(dest(path.vendor.dest[i]));
+    return src(path.vendor.src);
   }
 }
 function browserSyncInit() {
@@ -61,48 +69,50 @@ function browserSyncInit() {
   return browserSync.init({
     server: {
       baseDir: "./assets/",
-      index: "home.html",
+      index: "index.html",
     },
   });
 }
-function pugTask () {
+function pugTask() {
   return src(path.pug.src)
-  .pipe(pug({
-    doctype: 'html',
-    pretty: true
-  }))
-  .pipe(browserSync.stream())
-  .pipe(dest("./assets/"))
+    .pipe(
+      pug({
+        doctype: "html",
+        pretty: true,
+      })
+    )
+    .pipe(browserSync.stream())
+    .pipe(dest("./assets/"));
 }
 function sassTask() {
-  return src(path.scssTask.src).pipe(sass())
-  .pipe(browserSync.stream())
-  .pipe(dest("./assets/css"))
+  return src(path.scssTask.src)
+    .pipe(sass())
+    .pipe(
+      autoprefixer({
+        browsers: ["last 3 versions", "iOS >= 8", "Safari >= 8", "ie 11"],
+      })
+    )
+    .pipe(browserSync.stream())
+    .pipe(dest("./assets/css"));
 }
 function dev() {
   // clean();
   // series(sassTask, parallel(browserSyncInit, userefTask))();
   browserSyncInit();
-  watch(path.scssTask.src, series(sassTask, userefTask)).on('change',browserSync.reload);
-  watch(path.jsTask.src, userefTask).on('change',browserSync.reload);
-  watch(path.pug.src,series(pugTask));
-  watch('./assets/*html').on('change',browserSync.reload);
+  watch(path.scssTask.src, series(sassTask, userefTask)).on(
+    "change",
+    browserSync.reload
+  );
+  watch(path.pug.src, series(pugTask));
+  watch(path.jsTask.src, userefTask).on("change", browserSync.reload);
+  watch("./assets/*html").on("change", browserSync.reload);
 
   // watch("./assets/images",imageTask).on('change',browserSync.reload);
 }
 // image watch
-function  imageTask(){
-  return src("./assets/images/**/*.+(png|jpg|gif|svg)")
-    .pipe(
-      image({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true,
-      })
-      .pipe(cache(imagemin({
-        interlaced: true
-      })))
-    )
+function imageTask() {
+  return src("./assets/images/**/*.+(png|jpg|gif|svg|webp)")
+    .pipe(imagemin())
     .pipe(dest("dist/images"));
 }
 // image watch
@@ -116,21 +126,14 @@ function userefTask() {
     );
 }
 function minfyJsAndCss() {
-  return src("./assets/*.html")
-  .pipe(sourcemaps.init())
-    .pipe(useref())
-    .pipe(
-      gulpif(
-        "*.js",
-        gulpBabel({
-          presets: ["@babel/env"],
-        })
-      )
-    )
-    .pipe(gulpif("*.js", uglify()))
-    .pipe(gulpif("*.css", cssNano()))
-    .pipe(sourcemaps.write())
-    .pipe(dest(path.output));
+  return (
+    src("./assets/*.html")
+      // .pipe(sourcemaps.init())
+      .pipe(useref())
+      .pipe(gulpif("*.js", uglify()))
+      .pipe(gulpif("*.css", cssNano()))
+      .pipe(dest(path.output))
+  );
 }
 function minfyImages() {
   return src(path.images.src)
@@ -149,11 +152,17 @@ function minfyImages() {
     );
 }
 
-const pro = series(clean, sassTask, vendor, parallel(minfyJsAndCss, minfyImages));
+const pro = series(
+  clean,
+  font,
+  sassTask,
+  vendor,
+  imageWebp,
+  parallel(minfyJsAndCss, minfyImages)
+);
 exports.clean = clean;
 exports.dev = dev;
 exports.pro = pro;
-exports.vendor = vendor; 
-exports.pugTask = pugTask;
-
-
+exports.vendor = vendor;
+exports.font = font;
+exports.imageWebp = imageWebp;
