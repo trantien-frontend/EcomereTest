@@ -85,19 +85,25 @@ const getView = () => {
 const setView = (view) => {
   localStorage.setItem('View', JSON.stringify(view));
 };
-
 const getLimit = () => {
   return localStorage.getItem('_limit') ? JSON.parse(localStorage.getItem('_limit')) : 18;
 };
 const setLimit = (_limit) => {
   localStorage.setItem('_limit', JSON.stringify(_limit));
 };
-
 const getCurrentPage = () => {
   return localStorage.getItem('CurrentPage') ? JSON.parse(localStorage.getItem('CurrentPage')) : 1;
 };
 const setCurrentPage = (currentPage) => {
   localStorage.setItem('CurrentPage', JSON.stringify(currentPage));
+};
+const getSortStatus = () => {
+  return localStorage.getItem('SortStatus')
+    ? JSON.parse(localStorage.getItem('SortStatus'))
+    : 'title-ascending';
+};
+const setSortStatus = (sortStauts) => {
+  localStorage.setItem('SortStatus', JSON.stringify(sortStauts));
 };
 //  ===================pagination
 let start = 0;
@@ -222,7 +228,6 @@ const handleClickButtonPagination = (listProduct) => {
     }
   };
 };
-
 // ================= Button-view
 const handleClickButtonView = (listProduct) => {
   const buttonViews = document.querySelectorAll('.shop-topbar__view-button');
@@ -274,12 +279,46 @@ const productShowing = (start, end, listProduct) => {
   }
   productShowingUI.innerText = `Showing ${start + 1} - ${end - 1} of ${totalProduct - 1} result`;
 };
+const runSorting = (listProduct, sortStatus) => {
+  let newListProduct = [];
+  let objectSort = new sort();
+  if (sortStatus === 'title-ascending') {
+    newListProduct = [...objectSort.ascSortTitle(listProduct)];
+  } else if (sortStatus === 'title-descending') {
+    newListProduct = [...objectSort.descSortTitle(listProduct)];
+  } else if (sortStatus === 'price-ascending') {
+    newListProduct = [...objectSort.ascSortPrice(listProduct)];
+  } else if (sortStatus === 'price-descending') {
+    newListProduct = [...objectSort.descSortPrice(listProduct)];
+  }
+  pagination(newListProduct, view, _limit);
+};
+const sortProducts = (listProducts) => {
+  let sortOption = document.querySelector('#sort');
+  sortOption.onchange = (e) => {
+    let sortStatus = e.target.value;
+    runSorting(listProducts, sortStatus);
+    setSortStatus(sortStatus);
+  };
+};
+const defaultSort = (listProducts) => {
+  let newListProduct = [...listProducts];
+  let options = [...document.querySelectorAll('#sort option')];
+  let sortStatus = getSortStatus();
+  let optionCurrent = options.filter((option) => option.value == sortStatus);
+  optionCurrent[0].setAttribute('selected', 'selected');
+  let newSortStauts = optionCurrent[0].value;
+  runSorting(newListProduct, newSortStauts);
+  sortProducts(listProducts);
+};
+sortProducts();
 // ====================Default-loading-page
 const defaultLoadingPage = () => {
   getDatas().then((listProducts) => {
     storageSaveProducts(listProducts);
     let defaultView = getView();
     let default_limit = getLimit();
+    defaultSort(listProducts);
     defaultButtonViewActive(defaultView);
     pagination(listProducts, defaultView, default_limit);
     handleClickButtonView(listProducts);

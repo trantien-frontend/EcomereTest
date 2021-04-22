@@ -1,4 +1,5 @@
 include ./mixin/js.pug
+include ./mixin/breadcrumbs.pug
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -20,7 +21,7 @@ html(lang="en")
         .wrapper
                 include ./layout/loading.pug  
                 include ./layout/head.pug  
-                include ./layout/breadcrumbs.pug  
+                +breadcrumbs(page)
                 include ./layout/tableCart.pug  
                 include ./layout/footer.pug
         +block-js(page)

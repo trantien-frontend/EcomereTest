@@ -1,47 +1,47 @@
-class optionSort {
-  sortAz(products) {
-    products.sort((a, b) => {
-      let titleA = a.title.toLowerCase();
-      let titleB = b.title.toLowerCase();
-      if (titleA < titleB) {
+class sort {
+  ascSortTitle(object) {
+    object.sort((param_a, param_b) => {
+      let string_a = param_a.title.toUpperCase();
+      let string_b = param_b.title.toUpperCase();
+      if (string_a < string_b) {
         return -1;
       }
-      if (titleA > titleB) {
+      if (string_a > string_b) {
         return 1;
       }
       return 0;
     });
-    products.reverse();
-    return products;
+    return object;
   }
-  sortZa(products) {
-    products.sort((a, b) => {
-      let titleA = a.title.toLowerCase();
-      let titleB = b.title.toLowerCase();
-      if (titleA < titleB) {
+  descSortTitle(object) {
+    object.sort((param_a, param_b) => {
+      let string_a = param_a.title.toUpperCase();
+      let string_b = param_b.title.toUpperCase();
+      if (string_a < string_b) {
         return -1;
       }
-      if (titleA > titleB) {
+      if (string_a > string_b) {
         return 1;
       }
       return 0;
     });
-    return products;
+    object.reverse();
+    return object;
   }
-  sortPriceHL(values) {
-    values.sort((a, b) => {
+  ascSortPrice(object) {
+    object.sort((a, b) => {
       a = parseFloat(parseFloat(a.nowprice));
       b = parseFloat(parseFloat(b.nowprice));
       return a - b;
     });
-    return values;
+    return object;
   }
-  sortPriceLH(values) {
-    values.sort((a, b) => {
+  descSortPrice(object) {
+    object.sort((a, b) => {
       a = parseFloat(parseFloat(a.nowprice));
       b = parseFloat(parseFloat(b.nowprice));
       return b - a;
     });
-    return values;
+    return object;
   }
 }
